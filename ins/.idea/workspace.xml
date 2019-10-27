@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dd4feab-f415-4fec-9882-61e7358f0898" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/logged_out.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/registration/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/templates/registration/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ins/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ins/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ins/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ins/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/picture/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/picture/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/picture/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/picture/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

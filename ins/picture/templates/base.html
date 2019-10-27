@@ -15,6 +15,7 @@
   <li style="float:right"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
   <li style="float:right"><a href="#">User: {{ user.get_username }}</a></li>
   {% else %}
+   <li style="float:right"><a href="/picture/signup?next={{request.path}}">New Users?</a></li>
    <li style="float:right"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
   {% endif %}
 </ul>

@@ -1,18 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Project</title>
-    </head>
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
 
-    <body>
-    <div class="col-sm-2">
-      {% block sidebar %}
-        <ul class="sidebar-nav">
-          <li>Home</li>
-        </ul>
-     {% endblock %}
-      </div>
-    {% block content %}
-    {% endblock %}
-    </body>
+<ul>
+  <li><a class="active" href="">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+{% block content %}
+{% endblock %}
+</body>
 </html>

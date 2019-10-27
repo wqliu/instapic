@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dd4feab-f415-4fec-9882-61e7358f0898" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/templates/picture/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/static/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ins/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ins/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ins/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ins/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/picture/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/picture/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +32,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\25735\PycharmProjects\ins_project\ins\picture\static" />
       <recent name="C:\Users\25735\PycharmProjects\ins_project\ins\picture\static\picture" />
     </key>
   </component>

@@ -1,7 +1,6 @@
 {% extends 'display/base.html' %} 
-{% load static%} 
-{% load bootstrap3 %} 
-{% block content %} 
+{% load static%}
+{% block content %}
 {{block.super}}
 
 {% if request.user.is_authenticated %}
@@ -31,7 +30,7 @@
                         <!-- SECTION 1 PROFILE & user name -->
 
                         <!-- Profile Picture and User name for account -->
-                        
+
                         <p class="usernamehome-dp">
                             <img src="{% static 'images/pic3.jpg' %}" class="circlehome-dp" alt="signuplogo ">
                          {% if all_users %} {% for user in all_users %}
@@ -41,7 +40,7 @@
 
                         {% endif %}
                         </p>
-                       
+
                         <!-- SECTION 2 (IMAGE) -->
                         <!-- POSTED IMAGE -->
                         <a href="{{ collins.image }}" data-lightbox="gallery">
@@ -54,11 +53,11 @@
 
                                 <span class="like-row">
                                     {% if liked %}
-                                    <img class"likedhrt" src="{% static 'images/liked.png' %}" alt="liked picture"class="img-responsive"> {% else %}
+                                    <img class="likedhrt" src="{% static 'images/liked.png' %}" alt="liked picture"class="img-responsive"> {% else %}
                                     <img class="likehrt" src="{% static 'images/liked.png' %}" alt="not likedpicture" class="img-responsive"> {% endif %}
                                     <img class="commenthrt" id='comment-icon' src="../../static/images/comment.png"class="img-responsive" alt=" commentImage">
                                     <img class="savehrt" src="{% static 'images/unsaved.png' %}" alt="save picture">
-                                        
+
                                     </p>
                                 </span>
                                 <p><strong>5 likes</strong> </p>
@@ -67,8 +66,8 @@
                         <strong> "{{user.user}}" </strong>
                         {% endfor %}{% else %}
                         <p><strong>grammer</strong> {{collins.image_caption}}</p>
-                        
-                        {% endif %} 
+
+                        {% endif %}
 
                         <div class='commentsection'>
                             <input type='text' id='cmnt' placeholder='Add a comment...'>

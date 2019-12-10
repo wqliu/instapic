@@ -59,7 +59,7 @@ class Image(models.Model):
         set to auto using python model, this allows for date to be added automaticaly
     -imageuploader_profile-: this is the person who posted the picture (User)
         '''
-    image = models.ImageField(upload_to='pictsagram/')
+    image = models.ImageField(upload_to='static/pictsagram/')
     image_caption = models.CharField(max_length=700)
     tag_someone = models.CharField(max_length=50, blank=True)
     imageuploader_profile = models.ForeignKey(User, on_delete=models.CASCADE, null='True', blank=True)

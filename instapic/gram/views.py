@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 from .models import Profile, Image
 from django.contrib.auth.models import User
 from . import models
-#from annoying.decorators import ajax_request
+from .forms import SignUpForm
 
 from django.core.mail import send_mail
 
@@ -92,6 +92,24 @@ def login(request):
     return render(request, 'registration/login.html')
 
 
+#################################################################################################################################################################################
+# SIGNUP PAGE VIEW FUNCTION
+#################################################################################################################################################################################
+
+# SIGNUP page view function
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('home')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/registration_form.html', {'form': form})
 #################################################################################################################################################################################
 # UPLOAD PAGE VIEW FUNCTION
 #################################################################################################################################################################################

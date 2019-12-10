@@ -1,5 +1,5 @@
 {% block content %}
-
+{% load static %}
 
 <div class="container">
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -16,7 +16,7 @@
                 <div class="panel-heading">
                     <div class="col-md-6">
                         <a href="/">
-                            <img id="panelpic" src="../../static/images/instanav.png" alt="instagram logo on nav-bar " style="width:53px; height:30px;margin-top:5px;margin-left:26px;border-right:1px solid;padding-right: 23px; ">
+                            <img id="panelpic" src="{% static '/images/instanav.png' %}" alt="instagram logo on nav-bar " style="width:53px; height:30px;margin-top:5px;margin-left:26px;border-right:1px solid;padding-right: 23px; ">
                         </a>
                     </div>
                 </div>

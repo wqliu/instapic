@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,17 +12,13 @@
 
     <!-- <link href="{% static 'vendor/font-awesome-4.6.3/css/font-awesome.min.css' %}" rel="stylesheet"> -->
     <title>Instagram</title>
-    {% block styles%}
-    {% endblock %}
 </head>
 
 <body>
 
-
-
     <div class="container-fluid" id="body">
         {% block content %} 
-        {%include "registration/navbar.html" %}
+        {% include "registration/navbar.html" %}
         
         {% endblock %}
     </div>

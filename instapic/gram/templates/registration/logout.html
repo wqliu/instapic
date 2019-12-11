@@ -1,10 +1,12 @@
-{%extends "registration/base.html"%} {% block content %}
+{%extends "registration/base.html"%}
+{% load static %}
+{% block content %}
 <div class="container">
     <div class="logincont">
         <!-- Image beside Login-Form -->
         
         <div class="loginimage">
-            <img src="../../static/images/instagrampicture2.png " alt="instagram login phone ">
+            <img src="{% static 'images/instagrampicture2.png'%}" alt="instagram login phone ">
         </div>
         
         <!-- Output to Display error in login -->
@@ -19,7 +21,7 @@
             <div  class="panel panel-default">
 
                 <!-- Instagram image at the top of Login form -->
-                    <img src="../../static/images/instalogowhite.png" alt="signuplogo " style="width:250px; height:80px;margin: 5px auto; display: block;">
+                    <img src="{% static 'images/instalogowhite.png'%}" alt="signuplogo " style="width:250px; height:80px;margin: 5px auto; display: block;">
                  <div class="panel-body">
                      
                     
@@ -50,13 +52,13 @@
             
                 <div class="googlebtn">
             
-                    <a href="https://play.google.com/store/search?q=instagram"><img src="../../static/images/playstore.svg" alt="signuplogo " style="width:150px; height:40px "></a>
+                    <a href="https://play.google.com/store/search?q=instagram"><img src="{% static 'images/playstore.svg'%}" alt="signuplogo " style="width:150px; height:40px "></a>
             
                 </div>
             
                 <div class="applebtn">
             
-                    <a href="https://www.apple.com/us/search/instagram?src=itunes_serp"><img src="../../static/images/applestore.jpeg"  alt="signuplogo " style="width:150px; height:40px "></a>
+                    <a href="https://www.apple.com/us/search/instagram?src=itunes_serp"><img src="{% static '/images/applestore.jpeg'%}"  alt="signuplogo " style="width:150px; height:40px "></a>
             
                 </div>
             

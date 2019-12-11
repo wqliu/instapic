@@ -3,12 +3,14 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.conf.urls import url, include
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login as auth_login
 from .forms import PostForm
 from django.conf.urls.static import static
 from .models import Profile, Image
 from django.contrib.auth.models import User
 from . import models
 from .forms import SignUpForm
+from django.contrib.auth.forms import UserCreationForm
 
 from django.core.mail import send_mail
 
@@ -105,8 +107,8 @@ def signup(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('home')
+            auth_login(request, user)
+            return redirect('/')
     else:
         form = SignUpForm()
     return render(request, 'registration/registration_form.html', {'form': form})

@@ -11,7 +11,8 @@ from django.contrib.auth.models import User
 from . import models
 from .forms import SignUpForm
 from django.contrib.auth.forms import UserCreationForm
-
+from rest_framework import viewsets
+from gram.serializers import ProfileSerializer
 from django.core.mail import send_mail
 
 '''
@@ -25,18 +26,9 @@ authenticated users
 '''
 # ---------------------------------------------------------------------#
 '''End Of Import'''
-
-
 # ---------------------------------------------------------------------#
 
 # VIEW FUNCTIONS HERE!
-
-
-#################################################################################################################################################################################
-# HOME PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# Home page view function
 @login_required(login_url='/accounts/login/')
 def index(request):
     all_images = Image.objects.all()
@@ -45,60 +37,24 @@ def index(request):
     if next: return redirect(next)
     return render(request, 'display/home.html', {"all_images": all_images}, {"all_users": all_users})
 
-
-#################################################################################################################################################################################
-# EXPLORE PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# Explore page view function
 @login_required(login_url='/accounts/login/')
 def explore(request):
     return render(request, 'display/explore.html')
 
-
-#################################################################################################################################################################################
-# NOTIFICATION PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# Notification page view function
 @login_required(login_url='/accounts/login/')
 def notification(request):
     return render(request, 'display/notification.html')
 
-
-#################################################################################################################################################################################
-# PROFILE PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# Profile page view function
 @login_required(login_url='/accounts/login/')
 def profile(request):
     return render(request, 'display/userprofile.html')
 
-
-#################################################################################################################################################################################
-# LOG-OUT PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# Log-Out page view function
 def logout(request):
     return render(request, 'registration/logout.html')
 
-
-#################################################################################################################################################################################
-# LOGIN PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# Login page view function
 def login(request):
     return render(request, 'registration/login.html')
 
-
-#################################################################################################################################################################################
-# SIGNUP PAGE VIEW FUNCTION
-#################################################################################################################################################################################
-
-# SIGNUP page view function
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -112,11 +68,7 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/registration_form.html', {'form': form})
-#################################################################################################################################################################################
-# UPLOAD PAGE VIEW FUNCTION
-#################################################################################################################################################################################
 
-# Login page view function
 @login_required(login_url='/accounts/login/')
 def upload(request):
     current_user = request.user
@@ -138,3 +90,14 @@ def upload(request):
 #################################################################################################################################################################################
 
 # Like view function
+
+
+#################################################################################################
+# rest framework for Profile
+#################################################################################################
+class ProfileViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Profile.objects.all()[:10]
+    serializer_class = ProfileSerializer

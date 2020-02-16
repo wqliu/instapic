@@ -33,13 +33,10 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=30)
     bio = models.CharField(max_length=350)
     profile_pic = models.ImageField(upload_to='ProfilePicture/')
-    profile_avatar = models.ImageField(upload_to='AvatorPicture/')
+    #profile_avatar = models.ImageField(upload_to='AvatorPicture/')
     date = models.DateTimeField(auto_now_add=True, null=True)
 
     '''Method to filter database results'''
-
-    def __str__(self):
-        return self.profile.user
 
 
 #################################################################################################################################################################################################################################
